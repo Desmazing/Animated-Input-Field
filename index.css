@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background: #1d2d3a;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    min-height: 100vh;
+}
+.names{
+    width: 350px;
+    position: relative;
+}
+.names input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+    background: #1d2d3a;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    transition: 0.5s;
+}
+.names span{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.25);
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.names input:valid ~ span,
+.names input:focus~span{
+    color: #00dfc4;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 10px;
+    padding: 0 10px;
+    background: #1d2d3a;
+    border-left: 1px solid #00dfc4;
+    border-right: 1px solid #00dfc4;
+    letter-spacing: 0.2em;
+}
+.names:nth-child(2) input:valid~span,
+.names:nth-child(2) input:focus~span{
+    background: #00dfc4;
+    color: #1d2d3a;
+    border-radius: 2px;
+}
+.names input:valid,
+.names input:focus{
+    border:1px solid #00dfc4;
+}
